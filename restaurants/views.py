@@ -56,7 +56,7 @@ class RestaurantDetailView(DetailView):
 
 class RestaurantCreateView(LoginRequiredMixin, CreateView):
     form_class = RestaurantLocationCreateForm
-    template_name = 'restaurants/form.html'
+    template_name = 'form.html' #'restaurants/form.html'
     #success_url = '/restaurants/'
 
     def form_valid(self, form):
