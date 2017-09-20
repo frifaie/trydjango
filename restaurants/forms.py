@@ -10,4 +10,4 @@ class RestaurantCreateForm(forms.Form):
 class RestaurantLocationCreateForm(forms.ModelForm):
    class Meta:
       model = RestaurantLocation
-      fields = ['name', 'location', 'category',]
+      fields = ['name', 'location', 'category', 'slug',]

@@ -2,11 +2,15 @@
 {% block title %}Restaurants || {{ block.super }}{% endblock %}
 
 {% block content %}
-<h1>Restaurant List</h1>
+<h1>My Restaurant <small><a href="{% url 'restaurants:create' %}">ADD</a></small></h1>
 <ul>
   {% for obj in object_list %}
   <li><a href='{{ obj.get_absolute_url }}'>{{ obj }}</a><br/>
    <strong>{{ obj.name }}</strong> {{ obj.location }} <em>{{ obj.category }}</em></li>
+
+    {% empty %}
+    <li><a href="{% url 'restaurants:create' %}">Add One</a></li>
   {% endfor %}
 </ul>
+
 {% endblock %}
